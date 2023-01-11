@@ -5,6 +5,7 @@
 import 'dart:collection';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -275,12 +276,12 @@ class _FirestoreTableState extends State<FirestoreDataTable> {
                           onPressed: source.onDeleteSelectedItems,
                         ),
                     ];
-                    return PaginatedDataTable(
+                    return PaginatedDataTable2(
                       source: source,
                       onSelectAll: selectionEnabled ? source.onSelectAll : null,
                       onPageChanged: widget.onPageChanged,
                       showCheckboxColumn: widget.showCheckboxColumn,
-                      arrowHeadColor: widget.arrowHeadColor,
+                    //  arrowHeadColor: widget.arrowHeadColor,
                       checkboxHorizontalMargin: widget.checkboxHorizontalMargin,
                       columnSpacing: widget.columnSpacing,
                       dataRowHeight: widget.dataRowHeight,
